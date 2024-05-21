@@ -1,0 +1,88 @@
+<html data-theme="emerald">
+    <head>
+        <meta http-equiv="cache-control" content="no-cache" charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+        <link rel=icon href=assets/favicon.ico>
+        <link href="built_styles.css" rel="stylesheet">
+        <title>Video2Notes</title>
+    </head>
+    <body>
+      <!-- navbar -->
+      <div class="navbar bg-base-100">
+        <div class="flex-none">
+          <button class="btn btn-square btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+          </button>
+        </div>
+        <div class="flex-1">
+          <a class="btn btn-ghost text-xl">Video2Notes</a>
+        </div>
+        <div class="flex-none">
+          <button class="btn btn-square btn-ghost">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- main content --> 
+      <!-- two columns -->
+      <div class="flex flex-row gap-2 p-4 justify-between">
+        <div class="flex flex-col gap-8 px-4">
+          <div class="card bg-base-200 w-full">
+            <div class="card-body">
+              <h2 class="card-title mb-4">Upload Video</h2>
+              <form method="post" enctype="multipart/form-data">
+                <input type="file" class="file-input file-input-bordered w-full max-w-xs" />
+                <br>
+                <br>
+                <label class="label cursor-pointer justify-start w-full">
+                  <span class="label-text mr-2">Glossary</span> 
+                  <input type="checkbox" checked="checked" class="checkbox mr-8" />
+  
+                  <span class="label-text mr-2">Takeaways</span> 
+                  <input type="checkbox" checked="checked" class="checkbox mr-8" />
+  
+                  <span class="label-text mr-2">Diagrams/Images/Equations</span> 
+                  <input type="checkbox" checked="checked" class="checkbox mr-8" />
+                </label>
+                <button type="submit" class="btn btn-primary mt-4 uppercase">Generate</button>
+              </form>
+            </div>
+          </div>
+
+          <div class="card bg-base-200 w-full">
+            <div class="card-body">
+              <h2 class="card-title mb-4">Ask a question</h2>
+              <form method="post" enctype="multipart/form-data">
+                <textarea class="textarea textarea-bordered w-full" placeholder="Question"></textarea>
+                <br>
+                <button type="submit" class="btn btn-primary mt-4 uppercase">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-8 px-4 w-full">
+          <div class="card bg-green-100 w-full">
+            <div class="card-body">
+              <h2 class="card-title mb-4">Notes 
+              </h2>
+              <form method="post" enctype="multipart/form-data">
+                <textarea class="textarea textarea-bordered w-full h-60" placeholder="Notes"></textarea>
+              </form>
+            </div>
+          </div>
+
+          <div class="card bg-green-100 w-full">
+            <div class="card-body">
+              <h2 class="card-title mb-4">QnA chat</h2>
+              <form method="post" enctype="multipart/form-data">
+                <textarea class="textarea textarea-bordered w-full" placeholder="QnA chat"></textarea>
+              </form>
+            </div>
+          </div>
+        </div>
+        
+    </body>
+</html>
